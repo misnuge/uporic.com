@@ -1,0 +1,309 @@
+/* General Site */
+
+html, body {
+    height: 100%;
+}
+
+/* body {
+    font: 10px sans-serif;
+} */
+
+/* .navbar {
+    margin-bottom: 0px;
+} */
+
+.brand a,
+.brand a:focus,
+.brand a:hover {
+    color: #fff;
+}
+
+a,
+a:focus,
+a:hover {
+    color: #555;
+}
+
+.jumbotron {
+    /* Looks cool but commented out as it results in very slow performance on Chrome MAC */
+    /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+    /*box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+    background-color: #fff;
+    height: 60%;
+    min-height: 300px;
+    padding: 20px 0px;
+}
+
+.jumbotron .container {
+    height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+header {
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+header h3 {
+    margin-top: 10px;
+}
+
+div#chart {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    header .brand {
+        float: left;
+    }
+    header .masthead-nav {
+        float: right;
+    }
+
+    .jumbotron {
+        height: 80%;
+        min-height: 500px;
+    }
+
+    .masthead-nav > li {
+        margin: 0;
+    }
+
+    .masthead-nav > li + li {
+        margin-left: 20px;
+    }
+}
+
+/* Chart specific styling */
+svg {
+    font: 10px sans-serif;
+}
+
+text.version {
+    /* fill: #BBBBBB; */
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    /* fill: none;
+    stroke: #BBBBBB; */
+    shape-rendering: crispEdges;
+}
+
+text {
+    /* fill: #DDDDDD; */
+    fill: #000;
+}
+
+path {
+    fill: none;
+    stroke-width: 1;
+}
+
+path.candle {
+    stroke: #000000;
+}
+
+path.candle.body {
+    stroke-width: 0;
+}
+
+path.candle {
+    fill: #777777;
+    stroke: #777777;
+}
+
+path.candle.up {
+    fill: #00AA00;
+    stroke: #00AA00;
+}
+
+path.candle.down {
+    fill: #FF0000;
+    stroke: #FF0000;
+}
+
+.closeValue.annotation.up path {
+    fill: #00AA00;
+}
+
+path.volume {
+    fill: #DDDDDD;
+}
+
+.indicator-plot path.line {
+    fill: none;
+    stroke-width: 1;
+}
+
+.ma-0 path.line {
+    stroke: #1f77b4;
+}
+
+.ma-1 path.line {
+    stroke: #aec7e8;
+}
+
+.ma-2 path.line {
+    stroke: #ff7f0e;
+}
+
+path.macd {
+    stroke: #0000AA;
+}
+
+path.signal {
+    stroke: #FF9999;
+}
+
+path.zero {
+    stroke: #BBBBBB;
+    stroke-dasharray: 0;
+    stroke-opacity: 0.5;
+}
+
+path.difference {
+    fill: #BBBBBB;
+    opacity: 0.5;
+}
+
+path.rsi {
+    stroke: #000000;
+}
+
+path.overbought, path.oversold {
+    stroke: #FF9999;
+    stroke-dasharray: 5, 5;
+}
+
+path.middle, path.zero {
+    stroke: #BBBBBB;
+    stroke-dasharray: 5, 5;
+}
+
+.analysis path, .analysis circle {
+    stroke: blue;
+    stroke-width: 0.8;
+}
+
+.interaction path, .interaction circle {
+    pointer-events: all;
+}
+
+.interaction .body {
+    cursor: move;
+}
+
+.trendlines .interaction .start, .trendlines .interaction .end {
+    cursor: nwse-resize;
+}
+
+.trendline circle {
+    stroke-width: 0;
+    display: none;
+}
+.mouseover .trendline path {
+    stroke-width: 1;
+}
+
+.mouseover .trendline circle {
+    stroke-width: 1;
+    fill: yellow;
+    display: inline;
+}
+
+.supstance path {
+    stroke-dasharray: 2, 2;
+}
+
+.supstances .interaction path {
+    pointer-events: all;
+    cursor: ns-resize;
+}
+
+.supstances .axisannotation {
+    display: none;
+}
+
+.supstances .mouseover .axisannotation {
+    display: inline;
+}
+
+.supstances .axisannotation path {
+    fill: #806517;
+    stroke: none;
+}
+
+.mouseover .supstance path {
+    stroke-width: 1.5;
+}
+
+.crosshair {
+    cursor: crosshair;
+}
+
+.crosshair path.wire {
+    stroke: #555555;
+    stroke-dasharray: 1, 1;
+}
+
+.crosshair .axisannotation path {
+    fill: #777777;
+}
+
+path.tradearrow {
+    stroke: none;
+}
+
+path.tradearrow.buy {
+    fill: #0000FF;
+}
+
+path.tradearrow.buy-pending {
+    fill-opacity: 0.2;
+    stroke: #0000FF;
+    stroke-width: 1.5;
+}
+
+path.tradearrow.sell {
+    fill: #9900FF;
+}
+
+.tradearrow path.highlight {
+    fill: none;
+    stroke-width: 2;
+}
+
+.tradearrow path.highlight.buy,.tradearrow path.highlight.buy-pending {
+    stroke: #0000FF;
+}
+
+.tradearrow path.highlight.buy-pending {
+    fill: #0000FF;
+    fill-opacity: 0.3;
+}
+
+.tradearrow path.highlight.sell {
+    stroke: #9900FF;
+}
+
+path.volume {
+    fill: #AAAAAA;
+    opacity: 0.5;
+}
+
+path.volume.up {
+    fill: #99ff99;
+}
+
+path.volume.down {
+    fill: #ff9999;
+}

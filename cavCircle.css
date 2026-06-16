@@ -1,0 +1,83 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: auto;
+	color: #333;
+
+	padding: 0;
+	margin: 0;
+	position: relative;
+
+	--base-color: #666;
+}
+
+p {
+	line-height: 1.6;
+}
+
+a {
+	color: var(--base-color);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+a.unstyled {
+	text-decoration: none;
+	color: #333;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	color: var(--base-color);
+}
+
+header {
+	position: relative;
+	text-align: center;
+	overflow: auto;
+	padding: 40px 0 50px 0;
+}
+header h1 {
+	color: white;
+}
+.header-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.curvy-thing {
+	position: absolute;
+	bottom: 0;
+	height: 10px;
+	width: 100%;
+	background-color: white;
+	border-radius: 10px 10px 0 0;
+}
+
+.content {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.article {
+	padding: 20px;
+	margin: 20px auto;
+	max-width: 600px;
+}
+
+.article-link {
+	border-radius: 5px;
+	background-color: #F4F4F4;
+	-webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+	transition: transform 0.1s linear;
+}
+.article-link:hover {
+	transform: scale(1.04);
+}
